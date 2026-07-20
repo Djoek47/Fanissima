@@ -1,0 +1,71 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #09090F;
+  --foreground: #F4F3FF;
+  --card: rgba(255,255,255,0.045);
+  --card-foreground: #F4F3FF;
+  --popover: #121219;
+  --popover-foreground: #F4F3FF;
+  --primary: #FF0080;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255,255,255,0.07);
+  --secondary-foreground: #F4F3FF;
+  --muted: rgba(255,255,255,0.05);
+  --muted-foreground: rgba(244,243,255,0.38);
+  --accent: #C4A35A;
+  --accent-foreground: #09090F;
+  --destructive: #ff3a5c;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255,255,255,0.07);
+  --input: rgba(255,255,255,0.07);
+  --ring: #FF0080;
+  --chart-1: #FF0080;
+  --chart-2: #C4A35A;
+  --chart-3: #A78BFA;
+  --chart-4: #34D399;
+  --chart-5: #60A5FA;
+  --radius: 1.5rem;
+}
+
+.dark {
+  --background: #09090F;
+  --foreground: #F4F3FF;
+  --primary: #ff0080;
+  --accent: #c4a35a;
+  --border: rgba(255,255,255,0.09);
+  --ring: #ff0080;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { font-size: var(--font-size); }
+}
